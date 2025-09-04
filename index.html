@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BossX Mining</title>
+  <style>
+    body { font-family: Arial; background-color: #1e1e2f; color: white; text-align: center; padding-top: 50px; }
+    h1 { color: #ff9900; }
+    .balance { font-size: 48px; margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <h1>BossX Mining</h1>
+  <p>Saldo kamu:</p>
+  <div class="balance" id="balance">0.000</div>
+
+  <script>
+    let balance = 0;
+    const ratePerSecond = 0.001; // jumlah BossX per detik
+
+    setInterval(() => {
+      balance += ratePerSecond;
+      document.getElementById("balance").innerText = balance.toFixed(3);
+    }, 1000);
+  </script>
+</body>
+</html>
